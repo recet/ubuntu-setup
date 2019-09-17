@@ -40,8 +40,11 @@ source ~/.zshrc
 Set username and email address
 
 ```bash
-git config --global user.name "FIRST_NAME LAST_NAME"
-git config --global user.email "MY_NAME@example.com"
+cat <<EOF > ~/.gitconfig.local
+[user]
+  name = your name
+  email = your@email.com
+EOF
 ```
 
 #### Generating ssh keys

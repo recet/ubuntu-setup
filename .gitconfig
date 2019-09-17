@@ -1,6 +1,5 @@
-[user]
-	name = your name
-	email = your@email.com
+[include]
+    path = ~/.gitconfig.local
 [color]
     diff = auto
     status = auto
