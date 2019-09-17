@@ -1,15 +1,14 @@
 #!/bin/bash
 
-sudo apt update
-
 function install {
-    QUERY=$(dpkg-query -W -f='${Status} ${Version}\n' ${1})
+    QUERY=$(snap info ${1} | grep "name:" | cut --delimiter=':' -f 2 | xargs)
 
-    if [[ $QUERY == *"installed"* ]]; then
+    shopt -s nocasematch # Make caseinsentive
+    if [[ $QUERY == *"${1}"* ]]; then
         echo "Already installed: ${1}... $QUERY"
     else
-        echo "Installing: ${1}..."
-        sudo snap install $1
+        echo "Installing: ${1} ..."
+        sudo snap install ${1}
     fi
 }
 
