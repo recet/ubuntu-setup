@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TERRAFORM_VERSION="0.12.8"
+TERRAFORM_VERSION="0.12.6"
 FILE_NAME="terraform_${TERRAFORM_VERSION}_linux_amd64.zip"
 
 
