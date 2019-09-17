@@ -6,8 +6,8 @@ cd $WORKING_DIR
 
 # Run all installation scripts
 ./aptinstall.sh
-./programs.sh
 ./snapinstall.sh
+./programs.sh
 ./pip3install.sh
 ./symlink.sh
 
