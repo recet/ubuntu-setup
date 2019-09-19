@@ -12,4 +12,5 @@ function install {
     fi
 }
 
+install virtualenv
 install django
