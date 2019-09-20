@@ -1,10 +1,10 @@
 #!/bin/bash
 
 function install {
-    QUERY=$(snap info ${1} | grep "name:" | cut --delimiter=':' -f 2 | xargs)
+    QUERY=$(snap info ${1} | grep "installed" | cut --delimiter=':' -f 1 | xargs)
 
     shopt -s nocasematch # Make caseinsentive
-    if [[ $QUERY == *"${1}"* ]]; then
+    if [[ $QUERY == *"installed"* ]]; then
         echo "Already installed: ${1}... $QUERY"
     else
         echo "Installing: ${1} ..."
