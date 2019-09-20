@@ -33,6 +33,7 @@ install node
 install apigeetool
 install terraform
 install google-chrome
+install vault
 
 # Update additional settings
 ./code-settings.sh
