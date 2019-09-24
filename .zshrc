@@ -160,6 +160,11 @@ autoload -U compinit && compinit
 
 #### Kubernetes Stuff ####
 
+# Check for local KUBECONFIG path (used for merged kubeconfig path - IBM)
+if [ -f ~/.kubeconfig.local ] ; then
+    export KUBECONFIG=$(cat ~/.kubeconfig.local)
+fi
+
 # Kube-ps1
 # Kubeon or kubeoff
 export KUBE_PS1_PREFIX=' '

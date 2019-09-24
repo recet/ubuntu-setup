@@ -58,3 +58,19 @@ ssh-keygen -t rsa -b 4096
 ```bash
 sudo usermod -aG docker $(echo $USER)
 ```
+
+### IBM cloud kubernetes kluster config
+
+Note that default kubeconfig path is `~/.kube/config`, while IBM cloud uses different path.
+
+The IBM kluster config can be added to the `KUBECONFIG` using export or creating a `~/.kubeconfig.local` file.
+
+The .zshrc will look for `~/.kubeconfig.local` file.
+
+To automatically overwrite/create `~/.kubeconfig.local` file, run the following script followed by the cluster name: `scripts/ibm-cloud/ibm-connect.sh CLUSTER_NAME`:
+
+```bash
+./scripts/ibm-cloud/ibm-connect.sh dev
+```
+
+The `~/.kubeconfig.local` file will now contain the path of both `~/.kube/config` and `~/.bluemix/plugins/container-service/clusters`.
