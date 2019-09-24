@@ -34,6 +34,7 @@ install apigeetool
 install terraform
 install google-chrome
 install vault
+install ibmcloud
 
 # Update additional settings
 ./code-settings.sh
