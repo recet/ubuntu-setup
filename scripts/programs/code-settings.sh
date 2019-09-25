@@ -22,3 +22,4 @@ install 42Crunch.vscode-openapi
 install ricardo-emerson.java-development-extensions-pack
 install johnpapa.vscode-peacock
 install MS-vsliveshare.vsliveshare
+install wwm.better-align
