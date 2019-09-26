@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Instructions mostly copied from https://gist.github.com/dcberg/7e03a8363b30663ad20aeebf4a0f9663
+
 # Note the value is the IBM ID used to log into ibmcloud. This is the same
 # value that appears in the downloaded IKS cluster config files for the
 # context user field.
