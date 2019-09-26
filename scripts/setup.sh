@@ -10,6 +10,7 @@ cd $WORKING_DIR
 ./programs.sh
 ./pip3install.sh
 ./symlink.sh
+./additional-os-settings.sh
 
 # Get all upgrades
 sudo apt upgrade -y
