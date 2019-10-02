@@ -23,3 +23,4 @@ install ricardo-emerson.java-development-extensions-pack
 install johnpapa.vscode-peacock
 install MS-vsliveshare.vsliveshare
 install wwm.better-align
+install DotJoshJohnson.xml
