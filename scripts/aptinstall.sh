@@ -14,6 +14,8 @@ function install {
 }
 
 # Essentials 
+install python3-venv 
+install python3-pip
 install build-essential
 install apt-transport-https
 install ca-certificates

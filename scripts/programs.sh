@@ -15,7 +15,6 @@ function install {
 }
 
 # Programs
-install python3
 install code
 install docker
 install kubectl
