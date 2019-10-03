@@ -121,7 +121,8 @@ setopt incappendhistory  #Immediately append to the history file, not just when 
 ##############################################################################
 alias cp='cp -rv'
 alias ls='ls --color=auto -ACF'
-alias ll='ls --color=auto -alF'
+alias l='ls --color=auto -alF'
+alias ll='ls --color=auto -lF'
 alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'
 alias mv='mv -v'
@@ -172,7 +173,7 @@ export KUBE_PS1_SUFFIX=''
 export KUBE_PS1_COLOR_SYMBOL="%F{cyan}"
 export KUBE_PS1_COLOR_CONTEXT="%F{cyan}"
 export KUBE_PS1_COLOR_NS="%F{magenta}"
-PROMPT='$(kube_ps1) '$PROMPT
+PROMPT='$(kube_ps1) %f'$PROMPT
 
 # Get pods with maching name
 function pods {
