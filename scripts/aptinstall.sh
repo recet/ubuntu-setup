@@ -43,3 +43,5 @@ install libreoffice
 install vim
 install terminator
 install tilda
+install gnome-tweaks
+install htop
