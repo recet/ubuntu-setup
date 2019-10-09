@@ -5,7 +5,7 @@ sudo apt update
 function install {
     QUERY=$(dpkg-query -W -f='${Status} ${Version}\n' ${1})
 
-    if [[ $QUERY == *"installed"* ]]; then
+    if [[ $QUERY != *"not-installed"* ]]; then
         echo "Already installed: ${1}... $QUERY"
     else
         echo "Installing: ${1}..."
