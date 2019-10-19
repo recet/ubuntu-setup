@@ -7,6 +7,15 @@ function install {
   command -v $1 &> /dev/null
 
     if [ $? -ne 0 ]; then
+        echo "
+          ######################################
+          ######################################
+          ######################################
+          #               ${1}                 #
+          ######################################
+          ######################################
+          ######################################
+        "
         echo "Running: .programs/${1}.sh..."
         ./${1}.sh
     else
@@ -33,6 +42,9 @@ install google-chrome
 install vault
 install ibmcloud
 install atom
+
+# Preferred
+install nordvpn
 
 # Update additional settings
 ./code-settings.sh
