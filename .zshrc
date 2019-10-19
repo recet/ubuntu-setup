@@ -120,7 +120,7 @@ setopt incappendhistory  #Immediately append to the history file, not just when 
 # Alias Configuration
 ##############################################################################
 alias cp='cp -rv'
-alias ls='ls --color=auto -ACF'
+alias ls='ls --color=auto -CF'
 alias l='ls --color=auto -alF'
 alias ll='ls --color=auto -lF'
 alias grep='grep --color=auto'

@@ -9,6 +9,7 @@ cd $WORKING_DIR
 ./snapinstall.sh
 ./programs.sh
 ./pip3install.sh
+./oh-my-zsh.sh
 ./symlink.sh
 ./additional-os-settings.sh
 
