@@ -3,13 +3,13 @@
 sudo apt update
 
 function install {
-    QUERY=$(dpkg-query -W -f='${Status} ${Version}\n' ${1})
+    QUERY=$(apt-cache policy ${1})
 
-    if [[ $QUERY != *"not-installed"* ]]; then
-        echo "Already installed: ${1}... $QUERY"
-    else
+    if [[ $QUERY = *"Installed: (none)"* ]]; then
         echo "Installing: ${1}..."
         sudo apt install -y $1
+    else
+        echo "Already installed: ${1}..."        
     fi
 }
 
@@ -35,6 +35,8 @@ install xclip
 install snapd
 install virtualbox
 install virtualbox-qt
+install vagrant
+install awscli
 
 # Fundementals
 install nmap
