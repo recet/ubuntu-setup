@@ -34,6 +34,7 @@ install terraform
 install google-chrome
 install vault
 install ibmcloud
+install atom
 
 # Update additional settings
 ./code-settings.sh
