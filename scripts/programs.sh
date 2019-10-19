@@ -4,7 +4,7 @@ cd programs/
 
 # Skip installed programs
 function install {
-  which $1 &> /dev/null
+  command -v $1 &> /dev/null
 
     if [ $? -ne 0 ]; then
         echo "Running: .programs/${1}.sh..."
@@ -19,7 +19,6 @@ install code
 install docker
 install kubectl
 install gcloud # google-cloud-cli
-install aws # aws-cli
 install az # azure-cli
 install minikube
 install slack
