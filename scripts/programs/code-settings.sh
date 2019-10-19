@@ -4,7 +4,8 @@
 echo "Visual Studio Code Plugins and settings..."
 
 # Override settings.json file 
-ln -sf $(pwd)/../vsc_settings.json $HOME/.config/Code/User/settings.json
+sudo chown -hR $USER:$USER ~/.config
+sudo ln -sf $(pwd)/../vsc_settings.json $HOME/.config/Code/User/settings.json
 
 # Install extensions
 function install {
