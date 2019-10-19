@@ -26,7 +26,6 @@ install kubectx
 install spotify
 install circleci
 install helm
-install oh-my-zsh
 install node
 install apigeetool
 install terraform
