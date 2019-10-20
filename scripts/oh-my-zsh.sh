@@ -2,9 +2,11 @@
 
 if [ ! -f ~/.oh-my-zsh/oh-my-zsh.sh ]; then
     echo "git cloning oh-my-zsh.."
-    mkdir -p ~/tmp/oh-my-zsh
-    git clone  https://github.com/robbyrussell/oh-my-zsh.git ~/tmp/
-    mv ~/tmp/oh-my-zsh/* ~/.oh-my-zsh/*
+    mkdir -p ~/tmp
+    rm -rf ~/tmp/oh-my-zsh/
+    git clone  https://github.com/robbyrussell/oh-my-zsh.git ~/tmp/oh-my-zsh/
+    rsync -a -v -r ~/tmp/oh-my-zsh/* ~/.oh-my-zsh/
+    rm -rf ~/tmp/oh-my-zsh/
 else
     echo "Already installed: ~/.oh-my-zsh exist... skipping"
 fi
