@@ -33,6 +33,7 @@ install software-properties-common
 install powerline 
 install fonts-powerline
 install ppa-purge
+install rsync
 install curl
 install wget
 install jq
