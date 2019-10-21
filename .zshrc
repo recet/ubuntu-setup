@@ -73,6 +73,7 @@ plugins=(
     kubectl
     kube-ps1
     helm
+    terraform
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -175,7 +176,7 @@ export KUBE_PS1_SUFFIX=''
 export KUBE_PS1_COLOR_SYMBOL="%F{cyan}"
 export KUBE_PS1_COLOR_CONTEXT="%F{cyan}"
 export KUBE_PS1_COLOR_NS="%F{magenta}"
-PROMPT='$(kube_ps1) %f'$PROMPT
+PROMPT='$(kube_ps1) $(tf_prompt_info) %f'$PROMPT
 
 # Get pods with maching name
 function pods {

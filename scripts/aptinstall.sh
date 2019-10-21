@@ -57,3 +57,4 @@ install terminator
 install tilda
 install gnome-tweaks
 install htop
+install ipcalc
