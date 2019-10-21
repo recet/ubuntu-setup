@@ -39,6 +39,6 @@ vagrant ssh
 
 ```bash
 cd ubuntu-setup  && \
-sudo find scripts/ -type f -iname "*.sh" -exec chmod +x {} \; && \
+find scripts/ -type f -iname "*.sh" -exec chmod +x {} \; && \
 ./scripts/setup.sh
 ```
