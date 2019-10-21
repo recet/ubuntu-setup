@@ -5,6 +5,7 @@ echo "Visual Studio Code Plugins and settings..."
 
 # Override settings.json file 
 sudo chown -hR $USER:$USER ~/.config
+mkdir -p $HOME/.config/Code/User
 touch -a $HOME/.config/Code/User/settings.json # make sure file exists - doesnt exists if code is never started
 sudo ln -sf $(pwd)/../vsc_settings.json $HOME/.config/Code/User/settings.json
 
