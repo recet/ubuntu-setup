@@ -10,11 +10,11 @@ sudo apt-get update
 sudo apt upgrade -y
 
 # Run all installation scripts
+./oh-my-zsh.sh
 ./aptinstall.sh
 ./snapinstall.sh
 ./programs.sh
 ./pip3install.sh
-./oh-my-zsh.sh
 ./symlink.sh
 ./additional-os-settings.sh
 
