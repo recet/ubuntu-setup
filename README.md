@@ -4,10 +4,13 @@ Setup script for ubuntu.
 
 ## File descriptions
 
-* `symlink.sh` sets up symlinks in `$HOME`
+* `oh-my-zsh.sh` is to download oh-my-zsh
 * `aptinstall.sh` is for Ubuntu repository installs
+* `snapinstall.sh` is for snap repository installs
 * `programs.sh` is for other software
-* `desktop.sh` is for GNOME desktop settings
+* `pip3install.sh` isfor pip packages
+* `symlink.sh` sets up symlinks in `$HOME`
+* `additional-os-settings.sh` is for some desktop settings
 * `setup.sh` runs all the scripts and `apt upgrade`
 
 ## Pre-installation steps
@@ -74,3 +77,7 @@ To automatically overwrite/create `~/.kubeconfig.local` file, run the following 
 ```
 
 The `~/.kubeconfig.local` file will now contain the path of both `~/.kube/config` and `~/.bluemix/plugins/container-service/clusters`.
+
+### Test the setup script on a VM
+
+Follow instructions [here](test/vagrant/vm-setup.md)

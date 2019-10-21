@@ -1,0 +1,34 @@
+Vagrant.configure("2") do |config|
+  
+  # Image
+  config.vm.box = "ubuntu/bionic64"
+
+  config.vm.provider "virtualbox" do |v|
+    
+    # Set name 
+    v.name = "ubuntu-test"
+
+    # Define resources
+    v.memory = 8192
+    v.cpus = 4
+  end
+
+  # Network configs
+  config.vm.network "forwarded_port", guest: 443, host: 443
+
+  # Provision environment
+
+  ## Git clone project
+  $provision_script = <<-SCRIPT
+  echo I am provisioning...
+  sudo apt-get install git
+  git clone https://github.com/recet/ubuntu-setup.git /home/vagrant/ubuntu-setup
+  SCRIPT
+  config.vm.provision "shell", inline: $provision_script
+
+  ## or share foler with host
+  # config.vm.synced_folder "PATHTO/ubuntu-setup", "/home/vagrant/ubuntu-setup"
+
+
+
+end
