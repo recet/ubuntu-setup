@@ -47,5 +47,5 @@ install atom
 install nordvpn
 
 # Update code additional settings
-./code-settings.sh
+./programs/code-settings.sh
 
