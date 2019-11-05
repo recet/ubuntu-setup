@@ -37,7 +37,8 @@ install circleci
 install helm
 install node
 install apigeetool
-install terraform
+install tfswitch
+install terraform # now uses tfswitch for install
 install google-chrome
 install vault
 install ibmcloud

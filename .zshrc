@@ -74,9 +74,11 @@ plugins=(
     kube-ps1
     helm
     terraform
+    gcloud
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/.profile
 
 # User configuration
 
@@ -149,6 +151,7 @@ alias kstatus='kubectl get pods --all-namespaces -o wide|grep -v "1/1\|2/2\|3/3\
 alias kx='kubectx'
 alias kn='kubens'
 
+alias tfswitch='tfswitch -b ~/bin/terraform'
 
 ##############################################################################
 # Auto-completion Configuration

@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
 TERRAFORM_VERSION="0.12.6"
-FILE_NAME="terraform_${TERRAFORM_VERSION}_linux_amd64.zip"
 
+if hash terraform 2>/dev/null; then
+  echo "terraform already installed. Use tfswitch to change versions"
+  exit 0
+fi
 
-wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/${FILE_NAME}
-
-sudo mkdir -p /opt/terraform/
-sudo unzip ${FILE_NAME} -d /opt/terraform 
-
-sudo ln -sf /opt/terraform/terraform /usr/local/bin/terraform
-
-rm ${FILE_NAME}
+if hash tfswitch 2>/dev/null; then
+  tfswitch -b ~/bin/terraform $TERRAFORM_VERSION
+fi

@@ -16,6 +16,7 @@
     template = ~/.gitmessage
 [core]
     editor = vim
+    excludesfile = ~/.gitignore_global
 [push]
     followTags = true
     default = current
