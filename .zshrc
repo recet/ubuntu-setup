@@ -114,6 +114,8 @@ HISTSIZE=10000               #How many lines of history to keep in memory
 HISTFILE=~/.zsh_history     #Where to save history to disk
 SAVEHIST=5000               #Number of history entries to save to disk
 HISTDUP=erase               #Erase duplicates in the history file
+setopt HIST_FIND_NO_DUPS    #When searching for history entries in the line editor, do not display duplicates of a line previously found, even if the duplicates are not contiguous. 
+# setopt HIST_IGNORE_ALL_DUPS #If a new command line being added to the history list duplicates an older one, the older command is removed from the list (even if it is not the previous event). 
 setopt appendhistory     #Append history to the history file (no overwriting)
 setopt sharehistory      #Share history across terminals
 setopt incappendhistory  #Immediately append to the history file, not just when a term is killed
