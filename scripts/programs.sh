@@ -43,7 +43,6 @@ install google-chrome
 install vault
 install ibmcloud
 install atom
-install htpasswd
 
 # Preferred
 install nordvpn

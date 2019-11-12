@@ -47,6 +47,7 @@ install virtualbox
 install virtualbox-qt
 install vagrant
 install awscli
+install apache2-utils
 
 # Fundementals
 install nmap
