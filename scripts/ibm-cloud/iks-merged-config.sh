@@ -20,10 +20,11 @@ clustersdir=~/.bluemix/plugins/container-service/clusters
 mergedconfig="$HOME/.kube/config"
 while IFS= read -r -d '' file
 do
-    clustername=$(awk '/current-context/{print $2}' < $file)
-    if [[ ! $clustername =~ ibm-.* ]]; then
-        sed -i.bak "/\ $clustername/s/$clustername/ibm-$clustername/g" $file && rm $file.bak
-        sed -i.bak "/$clustername-$username/!s/$username/$clustername-$username/g" $file && rm $file.bak
+    clusterstring=$(awk '/current-context/{print $2}' < $file)
+    clusterid=$(echo $clusterstring | cut -d'/' -f2)
+    clustername=$(echo $clusterstring | cut -d'/' -f1)
+    if [[ ! $clusterstring =~ ibm-.* ]]; then
+        sed -i.bak "/\ $clustername\/$clusterid/s/$clustername\/$clusterid/ibm-$clustername/g" $file && rm $file.bak
     fi
     mergedconfig="$mergedconfig:$file"
 done < <(find $clustersdir -type f -name "*.yml" -print0)
