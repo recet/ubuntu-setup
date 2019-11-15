@@ -4,6 +4,6 @@
 
 curl -LO https://git.io/get_helm.sh
 sudo chmod 700 get_helm.sh
-./get_helm.sh --version v2.13.1
+./get_helm.sh --version v2.16.0
 
 rm get_helm.sh
