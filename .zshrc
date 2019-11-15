@@ -159,6 +159,7 @@ alias tfswitch='tfswitch -b ~/bin/terraform'
 # Auto-completion Configuration
 ##############################################################################
 source ~/.oh-my-zsh/plugins/git-flow/git-flow.plugin.zsh
+source /usr/local/ibmcloud/autocomplete/zsh_autocomplete
 autoload -U compinit && compinit
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
