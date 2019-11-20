@@ -4,4 +4,6 @@ id_rsa*
 *.pub
 .aws
 .bash_history
+# Might contain some id's if connected to other services
+scripts/vsc_settings.json 
 
