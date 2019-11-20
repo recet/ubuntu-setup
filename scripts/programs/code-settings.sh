@@ -28,3 +28,4 @@ install MS-vsliveshare.vsliveshare
 install wwm.better-align
 install DotJoshJohnson.xml
 install bbenoist.vagrant
+install Atlassian.atlascode
