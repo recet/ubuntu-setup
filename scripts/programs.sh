@@ -46,6 +46,7 @@ install atom
 
 # Preferred
 install nordvpn
+install k6
 
 # Update code additional settings
 ./code-settings.sh
