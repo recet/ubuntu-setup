@@ -30,3 +30,4 @@ install DotJoshJohnson.xml
 install bbenoist.vagrant
 install Atlassian.atlascode
 install mauve.terraform
+install VisualStudioExptTeam.vscodeintellicode
