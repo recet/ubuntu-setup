@@ -10,11 +10,24 @@
 
 # exit when any command fails
 set -e
-
+ORIGINAL_DIR=$(pwd)
 WORKING_DIR=$(dirname "$0")
 cd $WORKING_DIR
 
 ENV=${1:-default}
+
+if [ pwd != "${HOME}/bin" ]; then
+  if [ ! -e "${HOME}/bin/ibm-connect" ]; then
+    echo "creating ibm-connect symlink"
+    ln -s "$(pwd)/$(basename $0)" ${HOME}/bin/ibm-connect
+  fi
+  if [ ! -e "${HOME}/bin/iks-merge-config" ]; then
+    echo "creating iks-merged-config symlink"
+    ln -s "$(pwd)/iks-merged-config.sh" ${HOME}/bin/iks-merge-config
+  fi
+else
+  echo "symlinks are not set when run from a symlink"
+fi
 
 APIKEY=~/.ssh/$ENV-ibm
 INFRA_APIKEY_USER=~/.ssh/$ENV-ibm-sl-username
@@ -50,15 +63,16 @@ username=$(ibmcloud target |grep User | awk '{print $2}')
 
 # Downloads the Kubernetes config in IBMCloud....
 ibmcloud ks cluster config $ENV > /dev/null
-./iks-merged-config.sh $username
+iks-merge-config $username
  
 
 # Log into softlayer
 # ibmcloud sl init -u $TF_VAR_ibm_sl_username -p $TF_VAR_ibm_sl_api_key
 
 # # Change Terraform workspace
-# if [ -n "$(terraform workspace list | grep -e dev)" ]; then
-#     terraform workspace select $ENV
-# fi
+cd $ORIGINAL_DIR
+if [ -n "$(terraform workspace list | grep -e dev)" ]; then
+  terraform workspace select $ENV
+fi
 
-
+set +e

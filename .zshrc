@@ -155,6 +155,10 @@ alias kn='kubens'
 
 alias tfswitch='tfswitch -b ~/bin/terraform'
 
+if hash ibm-connect 2>/dev/null; then
+  alias ibm-connect='source ibm-connect'
+fi
+
 ##############################################################################
 # Auto-completion Configuration
 ##############################################################################
