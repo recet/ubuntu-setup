@@ -31,3 +31,4 @@ install bbenoist.vagrant
 install Atlassian.atlascode
 install mauve.terraform
 install VisualStudioExptTeam.vscodeintellicode
+install jebbs.plantuml
