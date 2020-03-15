@@ -22,5 +22,4 @@ function install {
 }
 
 # Essentials 
-install teams-for-linux
 install insomnia
