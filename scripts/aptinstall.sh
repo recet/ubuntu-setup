@@ -59,3 +59,4 @@ install tilda
 install gnome-tweaks
 install htop
 install ipcalc
+install pcregrep
