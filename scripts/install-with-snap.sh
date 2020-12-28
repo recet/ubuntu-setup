@@ -17,9 +17,20 @@ function install {
           ######################################
         "
         echo "Installing: ${1} ..."
-        sudo snap install ${1}
+        sudo snap install $@
     fi
 }
 
 # Essentials 
-install insomnia
+install code
+install docker
+install kubectl --classic
+install google-cloud-sdk --classic
+install slack --classic
+install spotify
+install circleci
+install helm --classic
+install node --classic
+install vault
+install atom --classic
+install teams-for-linux

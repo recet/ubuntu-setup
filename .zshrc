@@ -75,6 +75,8 @@ plugins=(
     helm
     terraform
     gcloud
+    vault
+    python
 )
 
 source $ZSH/oh-my-zsh.sh

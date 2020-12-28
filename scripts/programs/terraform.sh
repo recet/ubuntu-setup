@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
-TERRAFORM_VERSION="0.12.6"
+# Add the HashiCorp GPG key.
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 
-if hash terraform 2>/dev/null; then
-  echo "terraform already installed. Use tfswitch to change versions"
-  exit 0
-fi
+# Add the official HashiCorp Linux repository.
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
-if hash tfswitch 2>/dev/null; then
-  tfswitch -b ~/bin/terraform $TERRAFORM_VERSION
-fi
+# Update and install.
+sudo apt-get update && sudo apt-get install terraform
