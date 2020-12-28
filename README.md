@@ -1,21 +1,18 @@
 # Setup
 
-Setup script for ubuntu.
+Script to setup clean ubuntu.
 
 ## File descriptions
 
-* `oh-my-zsh.sh` is to download oh-my-zsh
-* `aptinstall.sh` is for Ubuntu repository installs
-* `snapinstall.sh` is for snap repository installs
-* `programs.sh` is for other software
-* `pip3install.sh` isfor pip packages
-* `symlink.sh` sets up symlinks in `$HOME`
-* `additional-os-settings.sh` is for some desktop settings
-* `setup.sh` runs all the scripts and `apt upgrade`
-
 ## Pre-installation steps
 
-### Make .sh files executable
+1. Make sure git is installed:
+
+```bash
+sudo apt-get install git
+```
+
+2. Make .sh files executable
 
 ```bash
 find scripts/ -type f -iname "*.sh" -exec chmod +x {} \;
@@ -24,7 +21,7 @@ find scripts/ -type f -iname "*.sh" -exec chmod +x {} \;
 ## Install programs
 
 ```bash
-./scripts/setup.sh
+./scripts/main.sh
 ```
 
 ## Post-installation steps

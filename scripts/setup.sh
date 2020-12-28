@@ -9,14 +9,14 @@ sudo apt --fix-broken install -y
 sudo apt-get update
 sudo apt upgrade -y
 
-# Run all installation scripts
-./oh-my-zsh.sh
-./aptinstall.sh
-./snapinstall.sh
-./programs.sh
-./pip3install.sh
-./symlink.sh
-./additional-os-settings.sh
+# Run installation scripts
+./install-oh-my-zsh.sh # Setup oh-my-zsh
+./install-with-apt.sh # install apps with abt
+./install-with-snap.sh # install apps with snap
+./install-with-script.sh # install apps with custom script
+./install-with-pip3.sh
+./configure-symlink.sh
+./configure-os.sh
 
 # Get all upgrades
 sudo apt --fix-broken install -y

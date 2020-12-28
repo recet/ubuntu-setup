@@ -1,5 +1,24 @@
 #!/bin/bash
 
+# if [ ! -f ~/.oh-my-zsh/oh-my-zsh.sh ]; then
+
+#     echo "
+#           ######################################
+#           ######################################
+#           ######################################
+#           #           oh-my-zsh                #
+#           ######################################
+#           ######################################
+#           ######################################
+#         "
+#     echo "Install oh-my-zsh.."
+#     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# else
+#     echo "Already installed: ~/.oh-my-zsh exist... skipping"
+# fi
+
+#!/bin/bash
+
 if [ ! -f ~/.oh-my-zsh/oh-my-zsh.sh ]; then
 
     echo "

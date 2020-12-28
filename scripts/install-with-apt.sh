@@ -16,7 +16,7 @@ function install {
           ######################################
         "
         echo "Installing: ${1}..."
-        sudo apt install -y $1
+        sudo apt install -y $@
     else
         echo "Already installed: ${1}..."        
     fi
@@ -37,6 +37,7 @@ install rsync
 install curl
 install wget
 install jq
+install yq
 install unzip
 install zsh
 install git
@@ -48,15 +49,13 @@ install virtualbox-qt
 install vagrant
 install awscli
 install apache2-utils
-
-# Fundementals
 install nmap
-install firefox
 install libreoffice
 install vim
-install terminator
-install tilda
 install gnome-tweaks
 install htop
 install ipcalc
 install pcregrep
+install lm-sensors # To measure hardware temp
+install hddtemp    # To measure hardware temp
+install psensor    # To measure hardware temp

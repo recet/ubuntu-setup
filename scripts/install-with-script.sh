@@ -24,29 +24,14 @@ function install {
 }
 
 # Programs
-install code
-install docker
-install kubectl
-install gcloud # google-cloud-cli
 install az # azure-cli
-install minikube
-install slack
 install kubectx
-install spotify
-install circleci
-install helm
-install node
 install apigeetool
-install tfswitch
-install terraform # now uses tfswitch for install
 install google-chrome
-install vault
-install ibmcloud
-install atom
-
-# Preferred
 install nordvpn
-install k6
+install ibmcloud
+install terraform
+install tfswitch
 
 # Update code additional settings
-./code-settings.sh
+./mscode-settings.sh
