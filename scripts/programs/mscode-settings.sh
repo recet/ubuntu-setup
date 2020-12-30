@@ -27,3 +27,4 @@ install Atlassian.atlascode
 install eamodio.gitlens
 install VisualStudioExptTeam.vscodeintellicode
 install 4ops.terraform
+install HashiCorp.terraform
