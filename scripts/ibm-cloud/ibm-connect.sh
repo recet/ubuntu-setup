@@ -62,7 +62,7 @@ ibmcloud login -g Default -r eu-de --apikey $TF_VAR_ibm_bx_api_key
 username=$(ibmcloud target |grep User | awk '{print $2}')
 
 # Downloads the Kubernetes config in IBMCloud....
-ibmcloud ks cluster config $ENV > /dev/null
+ibmcloud ks cluster config --cluster $ENV > /dev/null
 iks-merge-config $username
  
 
