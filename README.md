@@ -21,7 +21,7 @@ find scripts/ -type f -iname "*.sh" -exec chmod +x {} \;
 ## Install programs
 
 ```bash
-./scripts/main.sh
+./scripts/setup.sh
 ```
 
 ## Post-installation steps
