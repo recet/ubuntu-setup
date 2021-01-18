@@ -44,8 +44,9 @@ install git
 install keychain
 install xclip
 install snapd
-install virtualbox
-install virtualbox-qt
+# install virtualbox-dkms
+# install virtualbox
+# install virtualbox-qt
 install vagrant
 install awscli
 install apache2-utils
