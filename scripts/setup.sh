@@ -14,6 +14,7 @@ sudo apt upgrade -y
 ./install-with-apt.sh # install apps with abt
 ./install-with-snap.sh # install apps with snap
 ./install-with-script.sh # install apps with custom script
+./install-with-npm.sh
 ./install-with-pip3.sh
 ./configure-symlink.sh
 ./configure-os.sh

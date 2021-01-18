@@ -26,7 +26,6 @@ function install {
 # Programs
 install az # azure-cli
 install kubectx
-install apigeetool
 install google-chrome
 install nordvpn
 install ibmcloud
